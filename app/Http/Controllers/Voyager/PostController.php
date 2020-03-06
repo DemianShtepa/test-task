@@ -16,7 +16,6 @@ class PostController extends VoyagerBaseController
     public function getPost($id)
     {
         $post = Post::findOrFail($id);
-        dd($post->created_at);
         return view("post", ["post"=>$post]);
     }
 }
